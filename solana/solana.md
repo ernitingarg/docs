@@ -1,12 +1,12 @@
 ## Overview
-- [Hot to create Solana Token](https://moralis.io/how-to-create-a-solana-token-in-5-steps/)
+- [How to create Solana Token](https://moralis.io/how-to-create-a-solana-token-in-5-steps/)
 - SOL is the cryptocurrency that runs on the Solana blockchain, and it also acts as a governance token
 - Moreover, SOL is a so-called SPL token (token standard for the Solana blockchain). SPL tokens are to Solana what ERC-20, ERC-721, and ERC-1155 tokens are to the Ethereum network.
 - The ERC-20 standard regulates fungible tokens, ERC-721 NFTs, and ERC-1155 semi-fungible tokens.
 - In the Solana ecosystem, there is simply one program defining the common implementation of both fungible tokens and NFTs. For this reason, there is essentially one token standard regulating both token types. 
 
 ## Installation of Solana CLI
-- `sudo sh -c "$(curl -sSfL https://release.solana.com/v1.10.8/install)"`
+- Please refer document [here](https://docs.solana.com/cli/install-solana-cli-tools).
 - `solana --version`
 - `solana-install update`
 

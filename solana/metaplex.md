@@ -122,7 +122,9 @@ ts-node js/packages/cli/src/candy-machine-v2-cli.ts show -e devnet -k ../.config
 - Login to phantom -> `Add/Connect Wallet` -> `Import Private Key`
 - Copy private key content from `../.config/solana/devnet.json` and paste.
 
-### Candy Machine Mint UI
+## Candy Machine Mint UI
+
+### Candy Machine Mint UI local deployment
 - Go to folder `js/packages/candy-machine-ui`
 - Find file with extension `*.env` and rename it to just with `.env`
 - `.env` file should have below contents
@@ -140,7 +142,7 @@ cd js/packages/candy-machine-ui
 yarn install && yarn start
 ```
 
-### Deployment of CM Mint UI in vercel
+### Candy Machine Mint UI vercel deployment
 - In Visual Studio code, open folder `metaplex\js\packages\candy-machine-ui`
 - Open new terminal and run `yarn build`
 - The above command will create a new deployment folder `build`
@@ -149,17 +151,29 @@ yarn install && yarn start
 - Publish this folder in github
 - In `vercel`, import your repository and deploy. 
 
-### Metaplex Storefront
-- In Visual studio, open `metaplex` folder
-- Open terminal and run `cd js`
+## Metaplex Storefront
+
+### Metaplex Storefront local deployment
+- Fork repository `https://github.com/metaplex-foundation/metaplex` to your new repository.
+- `git clone <your_repo> <local_path>`
+- In `js/packages/web/.env`, update `REACT_APP_STORE_OWNER_ADDRESS_ADDRESS` with public key of your wallet.
+- In Visual studio, Open terminal and run `cd js`
 - `yarn install && yarn bootstrap`
 - `yarn start`
 - Access metaplex [url](http://localhost:3000/)
 
-### Deployment of Metaplex Storefront in vercel
-- Open file `js/packages/web/package.json`
+### Metaplex Storefront github deployment
+- All below instructions can be found in official [page](https://docs.metaplex.com/storefront/deploy).
+- In `js/packages/web/package.json`, update 
+	- specify your repo URL instead of https://github.com/metaplex-foundation/metaplex (for example, https://github.com/my-name/my-metaplex)
+	- set ASSET_PREFIX to repo name (for example, ASSET_PREFIX=/my-metaplex/)
+- `cd js/packages/web`
+- `yarn deploy`
 
-### Upload manually in Arweave
+### Metaplex Storefront vercel deployment
+- Please follow instructions in official [page](https://docs.metaplex.com/storefront/deploy#vercel).
+
+## Upload manually in Arweave
 ```
 npm install -g arweave-deploy
 arweave key-create new-arweave-key.json
